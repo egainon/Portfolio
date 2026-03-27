@@ -406,18 +406,18 @@ h3 {
 }
 
 /* Chat qui marche */
-#walking-cat {
+/* #walking-cat {
   position: absolute;
-  width: 80px; /* largeur d’un frame */
-  height: 80px; /* hauteur d’un frame */
+  width: 80px; 
+  height: 80px; 
   background-image: url("./assets/chats/BlackCatRun.png");
   background-repeat: no-repeat;
   image-rendering: pixelated;
-  display: none; /* invisible au départ */
-}
+  display: none;
+} */
 
 /* Animation des pattes */
-@keyframes walk {
+/* @keyframes walk {
   0% {
     background-position: 0 0;
   }
@@ -433,12 +433,29 @@ h3 {
   100% {
     background-position: 0 0;
   }
-}
+} */
 
-.walking {
+/* .walking {
   animation: walk 1.5s steps(3) infinite;
+} */
+
+.cat {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+.cat.show {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/*FOOTER*/
 footer {
   background-color: var(--green-light);
   border-top: 2px solid var(--green-dark);

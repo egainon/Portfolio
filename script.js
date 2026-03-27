@@ -15,35 +15,35 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 
-//Le chat qui marche
-const cat = document.getElementById("walking-cat");
+// Les CHATS POP
+const images = [
+  "chat1.png",
+  "chat2.png",
+  "chat3.png",
+  "chat4.png",
+  "chat5.png",
+];
 
 document.addEventListener("click", (e) => {
-  // Stoppe tout mouvement précédent si on clique encore
-  cat.classList.remove("walking");
+  const cat = document.createElement("div");
+  cat.classList.add("cat");
 
-  // Position initiale du chat au point du clic
-  cat.style.left = e.pageX - 32 + "px";
-  cat.style.top = e.pageY - 32 + "px";
-  cat.style.display = "block";
-  cat.classList.add("walking");
+  // Choisir une image aléatoire
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  cat.style.backgroundImage = `url("./assets/chats-pop/${randomImage}")`;
 
-  // Destination : droite de la page
-  const targetX = window.innerWidth;
+  // Position
+  cat.style.left = e.pageX - 40 + "px";
+  cat.style.top = e.pageY - 40 + "px";
 
-  const speed = 2; // px par frame, plus petit = plus lent
+  document.body.appendChild(cat);
 
-  function move() {
-    let currentX = parseInt(cat.style.left);
-    if (currentX + 64 < targetX) {
-      // +64 pour largeur du chat
-      cat.style.left = currentX + speed + "px";
-      requestAnimationFrame(move);
-    } else {
-      cat.style.display = "none"; // disparaît après avoir quitté l'écran
-      cat.classList.remove("walking");
-    }
-  }
+  // Apparition
+  setTimeout(() => cat.classList.add("show"), 10);
 
-  move();
+  // Disparition
+  setTimeout(() => cat.classList.remove("show"), 4500);
+
+  // Suppression
+  setTimeout(() => cat.remove(), 5000);
 });
