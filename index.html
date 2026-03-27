@@ -18,13 +18,14 @@
   <body>
   <header>
       <!-- navbar -->
-    <nav>
+    <nav aria-label="Navigation principale">
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
       <a href="#projects">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
 </header>
+<main>
   <!-- section hero-->
     <section class="hero">
       <div class="hero-text">
@@ -36,7 +37,7 @@
       </div>
       <!-- FRAME IMAGE -->
       <div class="frame">
-        <img src="./assets/image-em-redim.png" alt="portrait" />
+        <img src="./assets/image-em-redim.png" alt="Portrait d'Emilie Gainon, développeuse web" />
 
         <div class="border border-straight"></div>
         <div class="border border-rotated"></div>
@@ -44,27 +45,29 @@
     </section>
 
   <!-- section about -->
-    <section id="about" class="reveal">
-      <h2>À propos</h2>
-      <p class="skills-intro">Pendant plus de dix ans, j’ai organisé, structuré et rendu accessible l’information. 
-        Aujourd’hui, je construis les outils qui permettent de la faire vivre.<br/>
-        En reconversion dans le développement web après une expérience en tant que documentaliste, 
-        je me forme actuellement à <a href="https://adatechschool.fr/" target="_blank">Ada Tech School</a>, où j’apprends à concevoir des applications en JavaScript, 
-        React et Node.js à travers des projets concrets et collaboratifs.<br/>
-        Ce que j’aime dans le développement, c’est autant la résolution de problèmes que la construction d’interfaces
-        utiles et accessibles. Mon parcours m’a appris à être rigoureuse, autonome et attentive aux besoins des 
-        utilisateurs — des compétences que je mets aujourd’hui au service du code.<br/>
-        Je recherche une alternance à partir de juin 2026 pour continuer à progresser et contribuer à des projets 
-        qui ont du sens.</p>
-      <!-- <p>
-        🌱 En parallèle du code
-        <ol id="about">
-          <li>🧵 Broderie (thérapie anti-bug) </li>
-          <li>🍮 Exploration culinaire (cherche désespérément LE flan parfait)</li>
-          <li>🎬 Séries TV (trop nombreuses pour être listées)</li>    
-        </ol> 
-      </p> -->
-    </section>
+ <section id="about" class="reveal">
+  <h2>À propos</h2>
+  <div class="about-content">
+    <p>
+      Pendant plus de dix ans, j'ai organisé, structuré et rendu accessible l'information. 
+      Aujourd'hui, je construis les outils qui permettent de la faire vivre.
+    </p>
+    <p>
+      En reconversion dans le développement web après une expérience en tant que documentaliste, 
+      je me forme actuellement à <a href="https://adatechschool.fr/" target="_blank" class="link-highlight">Ada Tech School</a>, 
+      où j'apprends à concevoir des applications en JavaScript, React et Node.js à travers des projets concrets et collaboratifs.
+    </p>
+    <p>
+      Ce que j'aime dans le développement, c'est autant la résolution de problèmes que la construction d'interfaces 
+      utiles et accessibles. Mon parcours m'a appris à être rigoureuse, autonome et attentive aux besoins des 
+      utilisateurs — des compétences que je mets aujourd'hui au service du code.
+    </p>
+    <p class="highlight">
+      Je recherche une alternance à partir de juin 2026 pour continuer à progresser et contribuer à des projets 
+      qui ont du sens.
+    </p>
+  </div>
+</section>
 
   <!-- section skills -->
     <section id="skills" class="reveal">
@@ -113,75 +116,71 @@
   </span>
 </div>
 </div>
-
-    <!-- <div class="skill-card">
-      <h3>Soft Skills</h3>
-      <p>Une </p>
-        Organisation & priorisation
-        Analyse & structuration
-        Communication & travail d’équipe
-        Autonomie & adaptabilité
-    </div> -->
 </section>
+
   <!-- section projets -->
     <section id="projects" class="reveal">
       <h2>Projets</h2>
 
       <div class="grid">
         <!-- FRAME PROJET 1 -->
-        <div class="card-frame">
-          <div class="card"><h3>Projet Flan Finder 🥧</h3>
-          <p class="description">
-            Application fullstack permettant de trouver les meilleurs flans autour de soi grâce à 
-            une carte interactive. L’utilisateur peut explorer les boulangeries, 
-            consulter les détails d’un flan et découvrir les meilleures adresses proches de lui.
-          </p>
-          <p class="stack">stack : React, TypeScript, JavaScript, CSS, HTML</p>
-          <a href="https://github.com/egainon/Flan-Finder" target="_blank" class="btn" role="button">
-          Découvrir
-          </a>
-        </div>
-          <div class="border border-straight"></div>
-          <div class="border border-rotated"></div>
+        <div class="project-card">
+          <div class="project-image-wrapper">
+            <img src="./assets/projet-flan.png" alt="Flan Finder" class="project-image">
+          </div>
+          <div class="project-info">
+            <h3>Flan Finder</h3>
+            <p class="project-description">
+              Application fullstack permettant de trouver les meilleurs flans autour de soi.
+            </p>
+            <div class="project-footer">
+              <span class="project-stack">React • TypeScript • Node.js</span>
+              <a href="https://github.com/egainon/Flan-Finder" target="_blank" class="project-link">→</a>
+            </div>
+          </div>
         </div>
 
         <!-- FRAME PROJET 2 -->
-        <div class="card-frame">
-          <div class="card"><h3>Projet MétéoChat 🌤️🐱</h3>
-            <p class="description">
+        <div class="project-card">
+          <div class="project-image-wrapper">
+            <img src="./assets/projet-flan.png" alt="Flan Finder" class="project-image">
+          </div>
+          <div class="project-info">
+            <h3>Projet MétéoChat</h3>
+            <p class="project-description">
             Application météo interactive qui affiche la météo d’une ville… 
             accompagnée d’un chat adorable adapté au temps qu’il fait.
             </p>
-            <p class="stack">stack : React, TypeScript, JavaScript, CSS, HTML</p>
-            <a href="https://github.com/egainon/Appli-meteo-chats" target="_blank" class="btn" role="button">
-            Découvrir
-            </a>            
-          </div>          
-            <div class="border border-straight"></div>
-          <div class="border border-rotated"></div>
-        </div>
+            <div class="project-footer">
+              <span class="project-stack">React • TypeScript • JavaScript • CSS • HTML</span>
+              <a href="https://github.com/egainon/Appli-meteo-chats" target="_blank" class="project-link">→</a>
+            </div>
+          </div>
+        </div>         
 
         <!-- FRAME PROJET 3 -->
-        <div class="card-frame">
-          <div class="card"><h3>Projet Arbres remarquables🌳 </h3>
-            <p class="description">
+        <div class="project-card">
+          <div class="project-image-wrapper">
+            <img src="./assets/projet-flan.png" alt="Flan Finder" class="project-image">
+          </div>
+          <div class="project-info">
+            <h3>Projet Arbres remarquables</h3>
+            <p class="project-description">
             Application frontend permettant de visualiser et explorer les arbres remarquables 
             de Paris à partir de l’API Open Data Paris.
             </p>
-            <p class="stack">stack : JavaScript, CSS, HTML</p>
-            <a href="https://github.com/egainon/Adataviz-emilie" target="_blank" class="btn" role="button">
-            Découvrir
-            </a>
-          </div>          
-          <div class="border border-straight"></div>
-          <div class="border border-rotated"></div>
-        </div>
+            <div class="project-footer">
+              <span class="project-stack">JavaScript • CSS • HTML</span>
+              <a href="https://github.com/egainon/Adataviz-emilie" target="_blank" class="project-link">→</a>
+            </div>
+          </div>
+        </div>  
       </div>
     </section>
 
   <!-- LE CHAT -->
   <div id="walking-cat"></div>
-
+</main>
 <footer>
   <!-- section contacts -->
     <section id="contact" class="reveal">

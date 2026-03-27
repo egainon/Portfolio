@@ -1,6 +1,9 @@
-/*Le scroll */
+// ========== SCROLL ET REVEAL ==========
+
+// Sélectionner toutes les sections avec la classe "reveal"
 const reveals = document.querySelectorAll(".reveal");
 
+// Fonction pour gérer l'animation au scroll
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
 
@@ -13,9 +16,38 @@ function revealOnScroll() {
   });
 }
 
+// Appeler la fonction au scroll
 window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
-// Les CHATS POP
+// --------------------
+// SCROLL POUR NAVBAR FIXE
+// --------------------
+
+// Récupérer la hauteur de la navbar
+const navbarHeight = document.querySelector("nav").offsetHeight;
+
+// Sélectionner tous les liens internes de la navbar
+document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Empêche le scroll par défaut
+
+    const targetId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (!targetSection) return;
+
+    // Calculer la position du scroll en soustrayant la hauteur de la navbar
+    const topPos = targetSection.offsetTop - navbarHeight;
+
+    window.scrollTo({
+      top: topPos,
+      behavior: "smooth",
+    });
+  });
+});
+
+// ========== CHATS POP ==========
 const images = [
   "chat1.png",
   "chat2.png",
