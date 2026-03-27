@@ -25,6 +25,12 @@ const images = [
 ];
 
 document.addEventListener("click", (e) => {
+  // 🚫 Empêche les chats sur certains éléments
+  if (e.target.closest("button, a, input")) return;
+
+  const maxCats = 20;
+  if (document.querySelectorAll(".cat").length > maxCats) return;
+
   const cat = document.createElement("div");
   cat.classList.add("cat");
 
@@ -33,8 +39,10 @@ document.addEventListener("click", (e) => {
   cat.style.backgroundImage = `url("./assets/chats-pop/${randomImage}")`;
 
   // Position
-  cat.style.left = e.pageX - 40 + "px";
-  cat.style.top = e.pageY - 40 + "px";
+  const size = 100; // même valeur que ton CSS
+
+  cat.style.left = e.pageX - size / 2 + "px";
+  cat.style.top = e.pageY - size / 2 + "px";
 
   document.body.appendChild(cat);
 
