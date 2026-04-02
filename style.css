@@ -84,7 +84,7 @@ nav a:hover {
 
 /* ========== SECTIONS ========== */
 section {
-  padding: 60px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -420,8 +420,8 @@ footer {
 /* ========== ANIMATIONS CHAT ========== */
 .cat {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
