@@ -18,7 +18,7 @@ body {
   background: var(--green-light);
   font-family: "Inter", sans-serif;
   color: var(--green-dark);
-  padding-top: 60px;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -27,7 +27,7 @@ body::before {
   position: fixed;
   inset: 0;
   background-image: url("./assets/fond/toile-jouy-cat.png");
-  background-size: 300px;
+  background-size: 500px;
   background-repeat: repeat;
   opacity: 0.14;
   pointer-events: none;
@@ -107,11 +107,12 @@ h3 {
 
 /* ========== HERO ========== */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
+  justify-content: flex-start;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 30px 20px;
   gap: 30px;
 }
@@ -294,6 +295,7 @@ h3 {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  padding: 12px;
 }
 
 .project-card:hover {
@@ -302,7 +304,7 @@ h3 {
 
 .project-image-wrapper {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 1 / 1; /* carré parfait */
   border-radius: 12px;
   overflow: hidden;
   background: var(--green-dark);
@@ -330,10 +332,10 @@ h3 {
 
 .project-description {
   flex: 1;
+  font-size: 0.9rem;
   color: var(--green-dark);
   line-height: 1.6;
   margin-bottom: 15px;
-  font-size: 0.95rem;
 }
 
 .project-footer {
@@ -341,7 +343,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-top: auto;
+  margin-top: auto; /* pousse vers le bas */
 }
 
 .project-stack {
@@ -416,8 +418,8 @@ footer {
 /* ========== ANIMATIONS CHAT ========== */
 .cat {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -439,6 +441,7 @@ footer {
   /* GLOBAL */
   body {
     padding-top: 80px;
+    background-size: 300px;
   }
 
   body::before {
@@ -448,17 +451,18 @@ footer {
   /* NAVBAR */
   nav {
     gap: 50px;
-    padding: 20px;
+    padding: 0px;
     font-size: 3rem;
   }
 
   /* SECTIONS */
   section {
-    padding: 100px 20px;
+    padding: 5px 20px;
+    padding-bottom: 10px;
   }
 
   section[id] {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 10px;
   }
 
   h2 {
@@ -490,6 +494,7 @@ footer {
 
   .frame img {
     width: 300px;
+    box-shadow: 4px 4px 0 var(--green-dark);
   }
 
   /* ABOUT */
@@ -525,6 +530,12 @@ footer {
   .badge {
     gap: 8px;
     padding: 12px;
+    background: var (var(--green-light));
+    border: 1px solid var(--green-dark);
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0 var(--green-dark);
   }
 
   .badge img {
@@ -534,6 +545,10 @@ footer {
 
   .badge span {
     font-size: 14px;
+  }
+
+  .badge:hover {
+    transform: translateY(-5px);
   }
 
   /* PROJETS - 3 EN LIGNE */
@@ -558,6 +573,7 @@ footer {
   .project-image-wrapper {
     height: 250px;
     margin-bottom: 20px;
+    aspect-ratio: 4 / 3;
   }
 
   .project-image {

@@ -71,7 +71,7 @@ document.addEventListener("click", (e) => {
   cat.style.backgroundImage = `url("./assets/chats-pop/${randomImage}")`;
 
   // Position
-  const size = 100; // même valeur que ton CSS
+  const size = window.innerWidth < 768 ? 140 : 100; //même valeur que CSS
 
   cat.style.left = e.pageX - size / 2 + "px";
   cat.style.top = e.pageY - size / 2 + "px";
