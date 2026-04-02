@@ -18,7 +18,7 @@ body {
   background: var(--green-light);
   font-family: "Inter", sans-serif;
   color: var(--green-dark);
-  padding-top: 20px;
+  padding-top: 80px;
   position: relative;
 }
 
@@ -61,12 +61,12 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 15px 10px;
+  gap: 18px;
+  padding: 18px 10px;
   border-bottom: 2px solid var(--green-dark);
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 nav a {
@@ -89,15 +89,16 @@ section {
 }
 
 section[id] {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 80px;
 }
 
 h2 {
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   color: var(--green-dark);
   margin-bottom: 30px;
+  line-height: 1.2;
 }
 
 h3 {
@@ -128,22 +129,20 @@ h3 {
   margin-bottom: 10px;
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   line-height: 1.2;
 }
 
-.hero-text p:first-of-type {
-  font-size: 1.1rem;
+.hero-text .titre {
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--green-dark);
   margin-bottom: 20px;
-  font-size: 1.3rem;
-  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-.hero-text p:last-of-type {
-  font-size: 1rem;
+.hero-text .intro {
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--green-dark);
 }
@@ -156,7 +155,7 @@ h3 {
 
 .frame img {
   display: block;
-  width: 200px;
+  width: 280px;
   height: auto;
   position: relative;
   z-index: 1;
@@ -455,18 +454,18 @@ footer {
   /* NAVBAR */
   nav {
     gap: 50px;
-    padding: 0px;
+    padding: 20px;
     font-size: 3rem;
   }
 
   /* SECTIONS */
   section {
-    padding: 5px 20px;
-    padding-bottom: 10px;
+    padding: 80px 20px;
+    padding-bottom: 60px;
   }
 
   section[id] {
-    scroll-margin-top: 10px;
+    scroll-margin-top: 100px;
   }
 
   h2 {
@@ -476,8 +475,8 @@ footer {
   /* HERO */
   .hero {
     flex-direction: row;
-    padding: 50px 100px;
-    gap: 50px;
+    padding: 80px 100px;
+    gap: 60px;
   }
 
   .hero-text {
@@ -488,11 +487,11 @@ footer {
     font-size: 4rem;
   }
 
-  .hero-text p:first-of-type {
-    font-size: 1.3rem;
+  .hero-text .titre {
+    font-size: 1.5rem;
   }
 
-  .hero-text p:last-of-type {
+  .hero-text .intro {
     font-size: 1.1rem;
   }
 
@@ -534,7 +533,7 @@ footer {
   .badge {
     gap: 8px;
     padding: 12px;
-    background: var (var(--green-light));
+    background: var(--green-light);
     border: 1px solid var(--green-dark);
     border-radius: 10px;
     padding: 12px;
