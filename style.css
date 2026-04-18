@@ -29,7 +29,7 @@ body::before {
   background-image: url("./assets/fond/toile-jouy-cat.png");
   background-size: 500px;
   background-repeat: repeat;
-  opacity: 0.3;
+  opacity: 0.2;
   pointer-events: none;
   z-index: -1;
 }
@@ -64,7 +64,7 @@ nav {
   gap: 12px;
   padding: 18px 10px;
   border-bottom: 2px solid var(--green-dark);
-  font-family: "Caveat", cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
   font-size: 2.2rem;
 }
@@ -93,7 +93,7 @@ section[id] {
 }
 
 h2 {
-  font-family: "Caveat", cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
   font-size: 2.8rem;
   color: var(--green-dark);
@@ -126,7 +126,7 @@ h3 {
 .hero-text h1 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Caveat", cursive;
+  font-family: "Kalam", cursive;
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 1.2;
@@ -275,7 +275,7 @@ h3 {
 }
 
 .badge span {
-  font-size: 16x;
+  font-size: 16px;
   font-weight: 500;
   color: var(--green-dark);
 }
@@ -306,7 +306,7 @@ h3 {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
 }
 
 .project-image-wrapper {
