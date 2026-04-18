@@ -84,12 +84,12 @@ nav a:hover {
 
 /* ========== SECTIONS ========== */
 section {
-  padding: 10px 20px;
+  padding: 10px 20px 10px;  /* top réduit | horizontal | bottom */
   text-align: center;
 }
 
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 
 h2 {
@@ -465,8 +465,7 @@ footer {
 
   /* SECTIONS */
   section {
-    padding: 80px 20px;
-    padding-bottom: 60px;
+    padding: 5px 20px 60px;  /* top réduit | horizontal | bottom */
   }
 
   section[id] {
